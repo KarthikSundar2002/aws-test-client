@@ -25,19 +25,11 @@ def generate_presigned_url(s3_client, client_method, method_params, expires_in):
 
 client = boto3.client(
     's3',
-    aws_access_key_id="AKIA6F2OXH3ZJS7Q63NW",
-    aws_secret_access_key="uDQLG4Jdg9JCsySUs/81iWg+9N3CroetikzS1bjx",
-    region_name="ap-south-1",
-    endpoint_url="https://s3.ap-south-1.amazonaws.com",
+    aws_access_key_id="<--your--id-->,
+    aws_secret_access_key="<--your--id-->",
+    region_name="<--region-name-->",
+    endpoint_url="<--endpoint--url-->",
     config=Config(signature_version='s3v4')
-)
-
-resource = boto3.resource(
-    's3',
-    aws_access_key_id="AKIA6F2OXH3ZJS7Q63NW",
-    aws_secret_access_key="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",
-    region_name="ap-south-1",
-    config=Config(signature_version='v4')
 )
 
 clientResponse = client.list_buckets()
